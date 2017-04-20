@@ -2,9 +2,13 @@
   "name": "async-interactor",
   "version": "0.0.1",
   "description": "Interactor pattern using async/await",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "mkdir -p lib && babel --presets latest,stage-2 index.js --out-dir lib"
   },
   "repository": {
     "type": "git",
@@ -20,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/ripeworks/async-interactor/issues"
   },
-  "homepage": "https://github.com/ripeworks/async-interactor#readme"
+  "homepage": "https://github.com/ripeworks/async-interactor#readme",
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
 }
