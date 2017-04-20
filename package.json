@@ -1,0 +1,24 @@
+{
+  "name": "async-interactor",
+  "version": "0.0.1",
+  "description": "Interactor pattern using async/await",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ripeworks/async-interactor.git"
+  },
+  "keywords": [
+    "async",
+    "await",
+    "interactor"
+  ],
+  "author": "Ripeworks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ripeworks/async-interactor/issues"
+  },
+  "homepage": "https://github.com/ripeworks/async-interactor#readme"
+}
