@@ -7,7 +7,7 @@ Interactor pattern using async/await
 import Interactor from 'async-interactor'
 
 class AuthenticateUser extends Interactor {
-  async run () {
+  async call () {
     const {username, password} = this.context
 
     const user = await db.where({username, password}).find()
@@ -22,7 +22,7 @@ class AuthenticateUser extends Interactor {
 
 // example route handler
 app.post('/login', async (req, res) => {
-  const result = await AuthenticateUser.run(req.params)
+  const result = await AuthenticateUser.call(req.params)
   if (result.success) {
     res.send({success: true, user: result.user})
   }
@@ -42,6 +42,6 @@ class AddSubscription extends Interactor {
 }
 
 app.post('/buy', async (req, res) => {
-  const result = await AddSubscription.run(req.params)
+  const result = await AddSubscription.call(req.params)
 })
 ```
