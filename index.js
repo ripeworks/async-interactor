@@ -3,7 +3,7 @@ export default class Interactor {
     this.context = context
   }
 
-  static call (context = {}) {
+  static async call (context = {}) {
     const instance = new this(context)
     return instance.run()
   }
@@ -34,9 +34,10 @@ export default class Interactor {
     try {
       if (this.before) await this.before()
       await this.call()
-      this.context = {...this.context, success: true, failure: false}
       if (this.after) await this.after()
+      this.context = {...this.context, success: true, failure: false}
     } catch (error) {
+      console.log(error)
       this.context = {...this.context, success: false, failure: true, error}
       if (this.rollback) await this.rollback()
     }

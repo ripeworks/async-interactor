@@ -7,8 +7,8 @@
     "lib/"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "mkdir -p lib && babel --presets latest,stage-2 index.js --out-dir lib"
+    "test": "ava",
+    "prepublish": "mkdir -p lib && babel index.js --out-dir lib"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "ava": "^0.19.1",
     "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1"
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.4.0"
   }
 }
