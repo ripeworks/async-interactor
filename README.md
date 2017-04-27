@@ -8,6 +8,14 @@
   <a href="https://badge.fury.io/js/async-interactor"><img src="https://badge.fury.io/js/async-interactor.svg"></a>
 </div>
 
+## Getting Started
+
+```shell
+$ npm install --save async-interactor
+```
+
+`NOTE: async/await support from node 7.6.0 or higher is required!`
+
 ## Usage
 
 ```js
