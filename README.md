@@ -1,5 +1,10 @@
-# async-interactor
-Interactor pattern using async/await
+<h1 align="center">async interactor</h1>
+<div align="center">
+  [Interactor](https://github.com/collectiveidea/interactor) pattern for node.js/browser using async/await
+</div>
+<div align="center">
+  [![npm version](https://badge.fury.io/js/async-interactor.svg)](https://badge.fury.io/js/async-interactor)
+</div>
 
 ## Usage
 
