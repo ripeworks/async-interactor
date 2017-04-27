@@ -10,11 +10,11 @@
 
 ## Getting Started
 
-```shell
+```sh
 $ npm install --save async-interactor
 ```
 
-`NOTE: async/await support from node 7.6.0 or higher is required!`
+_NOTE: async/await support from node 7.6.0 or higher is required!_
 
 ## Usage
 
