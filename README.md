@@ -1,9 +1,9 @@
 <h1 align="center">async interactor</h1>
 <div align="center">
-  [Interactor](https://github.com/collectiveidea/interactor) pattern for node.js/browser using async/await
+  <a href="https://github.com/collectiveidea/interactor">Interactor</a> pattern for node.js/browser using async/await
 </div>
 <div align="center">
-  [![npm version](https://badge.fury.io/js/async-interactor.svg)](https://badge.fury.io/js/async-interactor)
+  <a href="https://badge.fury.io/js/async-interactor"><img src="https://badge.fury.io/js/async-interactor.svg"></a>
 </div>
 
 ## Usage
