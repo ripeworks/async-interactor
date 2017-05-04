@@ -14,7 +14,7 @@
 $ npm install --save async-interactor
 ```
 
-_NOTE: async/await support from node 7.6.0 or higher is required!_
+_NOTE: async/await support required from node 7.6.0+ or something like [async-to-gen](https://github.com/leebyron/async-to-gen)_
 
 ## Usage
 
