@@ -119,5 +119,6 @@ test('throw option', async t => {
     }
   }
 
-  await t.throws(Test.call({}))
+  const error = await t.throws(Test.call({}))
+  t.is(error.message, 'Boom')
 })

@@ -60,3 +60,20 @@ app.post('/buy', async (req, res) => {
   const result = await AddSubscription.call(req.params)
 })
 ```
+
+## Errors
+
+By default any errors thrown inside of an interactor are swallowed and return in the result of the interactor. This allows you to check the result of the interactor after it runs, regardless of a success or failure. There is a `throwOnError` option available if you don't want this default behavior.
+
+```js
+class ThisWillThrow extends Interactor {
+  throwOnError = true
+
+  async call () {
+    throw new Error('Boom')
+  }
+}
+
+const result = await ThisWillThrow.call({})
+console.log(result) // <- this never runs because the error is `thrown`
+```
