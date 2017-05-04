@@ -109,3 +109,15 @@ test('before/after', async t => {
   t.is(result.user.id, 1)
   t.false(result.user.new)
 })
+
+test('throw option', async t => {
+  class Test extends Interactor {
+    throwOnError = true
+
+    async call () {
+      throw new Error('Boom')
+    }
+  }
+
+  await t.throws(Test.call({}))
+})

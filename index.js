@@ -37,9 +37,11 @@ export default class Interactor {
       if (this.after) await this.after()
       this.context = {...this.context, success: true, failure: false}
     } catch (error) {
-      console.log(error)
       this.context = {...this.context, success: false, failure: true, error}
       if (this.rollback) await this.rollback()
+      if (this.throwOnError) {
+        throw error
+      }
     }
 
     return this.context

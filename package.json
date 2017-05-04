@@ -6,9 +6,6 @@
   "files": [
     "lib/"
   ],
-  "engines": {
-    "node": ">= 7.6.0"
-  },
   "scripts": {
     "test": "ava",
     "prepublish": "mkdir -p lib && babel index.js --out-dir lib"
@@ -28,10 +25,14 @@
     "url": "https://github.com/ripeworks/async-interactor/issues"
   },
   "homepage": "https://github.com/ripeworks/async-interactor#readme",
+  "ava": {
+    "babel": "inherit"
+  },
   "devDependencies": {
     "ava": "^0.19.1",
     "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.4.0"
   }
